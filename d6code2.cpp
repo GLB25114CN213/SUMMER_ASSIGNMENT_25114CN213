@@ -1,3 +1,4 @@
+// Day 6 Solutions
 #include <iostream>
 #include <cmath>
 using namespace std;
