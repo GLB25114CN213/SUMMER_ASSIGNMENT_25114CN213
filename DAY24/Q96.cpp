@@ -2,28 +2,23 @@
 using namespace std;
 
 int main() {
-    int n;
-    cin >> n;
+    char str[100];
+    cin.getline(str, 100);
 
-    int arr[n];
+    cout << "After removing duplicates: ";
 
-    for(int i = 0; i < n; i++)
-        cin >> arr[i];
-
-    cout << "Array after removing duplicates: ";
-
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; str[i] != '\0'; i++) {
         bool duplicate = false;
 
         for(int j = 0; j < i; j++) {
-            if(arr[i] == arr[j]) {
+            if(str[i] == str[j]) {
                 duplicate = true;
                 break;
             }
         }
 
         if(!duplicate)
-            cout << arr[i] << " ";
+            cout << str[i];
     }
 
     return 0;
